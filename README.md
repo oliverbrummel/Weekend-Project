@@ -14,6 +14,7 @@ The following fields should be on the Ticket model, but updated on the server:
 
 You should be able to submit the ticket to the server and it should be saved into MongoDB. As tickets are added, they should appear below listed 2 per row each within their own Bootstrap 'well'. The remainder of the page should be styled with Bootstrap as well. If the page is refreshed, the tickets listed below should remain.   
 
+I advise you to validate your data as you go with something like adminMongo: https://github.com/mrvautin/adminMongo
 
 ##Hard Mode
 Add buttons to each ticket to allow them to be removed (the button should read 'completed'). 
