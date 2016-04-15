@@ -19,4 +19,9 @@ You should be able to submit the ticket to the server and it should be saved int
 Add buttons to each ticket to allow them to be removed (the button should read 'completed'). 
 
 ##Pro mode
-Allow all of the tickets fields to be updated and saved. 
+Allow all of the tickets fields to be updated and saved. Flow should be as follows:
+* 'Edit' button is clicked
+* Fields be become editable
+* 'Edit' button is replaced by a 'Save' button
+* Edits are made
+* 'Save' button should send values to database and return fields to read-only
