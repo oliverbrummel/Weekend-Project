@@ -9,7 +9,7 @@ In this weekend assignment you will br creating a ticket management sysystem usi
 * Assignee (String)
 * Reporter (String)
 
-The following fields should be on the Ticket model, but updated on the server:
+The following fields should be on the Ticket model (ticket.js), but updated on the server:
 * Created (Date)
 * Updated (Date)
 
