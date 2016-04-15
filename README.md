@@ -12,7 +12,7 @@ The following fields should be on the Ticket model, but updated on the server:
 * Created (Date)
 * Updated (Date)
 
-You should be able to submit the ticket to the server and it should be saved into MongoDB via a 'Submit' button. As tickets are added, they should appear below listed 3 per row each within their own Bootstrap 'well'. The remainder of the page should be styled with Bootstrap as well. If the page is refreshed, the tickets listed below should remain.   
+You should be able to submit the ticket to the server and it should be saved into MongoDB via a 'Submit' button. All of your ticket related requests should be sent to a router named 'assignmentRouter.js'. As tickets are added, they should appear below listed 3 per row each within their own Bootstrap 'well'. The remainder of the page should be styled with Bootstrap as well. If the page is refreshed, the tickets listed below should remain.   
 
 I advise you to validate your data as you go with something like adminMongo: https://github.com/mrvautin/adminMongo
 
