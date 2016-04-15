@@ -1,6 +1,6 @@
 #Weekend Assignment
 
-In this weekend assignment you will br creating a ticket management sysystem using the MEAN Stack with the option to swap out AngularJS with jQuery. If you choose to use AngularJS, your controllers should use the '[controller as](https://docs.angularjs.org/api/ng/directive/ngController)' syntax.  You app's index.html should load with a series of inputs with the following fields:
+In this weekend assignment you will br creating a ticket management sysystem using the MEAN Stack with the option to swap out AngularJS with jQuery. If you choose to use AngularJS, your controllers should use the '[controller as](https://docs.angularjs.org/api/ng/directive/ngController)' syntax.  Your app's index.html should load with a series of inputs with the following fields:
 
 * Type (String)
 * Priority (String)
@@ -12,12 +12,12 @@ The following fields should be on the Ticket model, but updated on the server:
 * Created (Date)
 * Updated (Date)
 
-You should be able to submit the ticket to the server and it should be saved into MongoDB. As tickets are added, they should appear below listed 2 per row each within their own Bootstrap 'well'. The remainder of the page should be styled with Bootstrap as well. If the page is refreshed, the tickets listed below should remain.   
+You should be able to submit the ticket to the server and it should be saved into MongoDB via a 'Submit' button. As tickets are added, they should appear below listed 3 per row each within their own Bootstrap 'well'. The remainder of the page should be styled with Bootstrap as well. If the page is refreshed, the tickets listed below should remain.   
 
 I advise you to validate your data as you go with something like adminMongo: https://github.com/mrvautin/adminMongo
 
 ##Hard Mode
-Add buttons to each ticket to allow them to be removed (the button should read 'completed'). 
+Add buttons to each ticket to allow them to be removed (the button should read 'Completed'). 
 
 ##Pro mode
 Allow all of the tickets fields to be updated and saved. Flow should be as follows:
