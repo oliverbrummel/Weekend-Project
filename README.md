@@ -16,7 +16,7 @@ You should be able to submit the ticket to the server and it should be saved int
 
 
 ##Hard Mode
-Add buttons to each ticket to allow them to be removed (completed). 
+Add buttons to each ticket to allow them to be removed (the button should read 'completed'). 
 
 ##Pro mode
 Allow all of the tickets fields to be updated and saved. 
