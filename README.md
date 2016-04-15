@@ -8,7 +8,7 @@ In this weekend assignment you will br creating a ticket management sysystem usi
 * Assignee
 * Reporter
 
-The following fields should be on the model, but updated on the server:
+The following fields should be on the Ticket model, but updated on the server:
 * Created
 * Updated
 
