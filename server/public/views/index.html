@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app = "ticketApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Ticket Management System</title>
+    <script src = "/vendor/angular/angular.min.js"></script>
+    <script src = "/assets/scripts/client.min.js"></script>
+  </head>
+  <body ng-controller = "MainController as main">
+    <div>
+      <p>Type: <input type="text" ng-model = "main.ticket.type" /></p>
+      <p>Priority: <input type="text" ng-model = "main.ticket.priority"/></p>
+      <p>Description: <input type="text" ng-model = "main.ticket.description"/></p>
+      <p>Assignee: <input type="text" ng-model = "main.ticket.assignee"/></p>
+      <p>Reporter: <input type="text" ng-model = "main.ticket.reporter"/></p>
+      <input type="submit" ng-click = "main.makeTicket()"/>
+    </div>
+
+    <div>
+      <ul ng-repeat = "item in main.tickets">
+        <li>Type: {{item.type}}</li>
+        <li>Priority: {{item.priority}}</li>
+        <li>Description: {{item.description}}</li>
+        <li>Assignee: {{item.assignee}}</li>
+        <li>Reporter: {{item.reporter}}</li>
+      </ul>
+
+    </div>
+
+  </body>
+</html>
