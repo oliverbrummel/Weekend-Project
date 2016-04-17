@@ -5,6 +5,10 @@
     <title>Ticket Management System</title>
     <script src = "/vendor/angular/angular.min.js"></script>
     <script src = "/assets/scripts/client.min.js"></script>
+    <script src = "/vendor/jquery/dist/jquery.min.js"></script>
+    <script src = "/vendor/moment/min/moment.min.js"></script>
+    <script src = "/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href = "/vendor/bootstrap/dist/css/bootstrap.min.css" />
   </head>
   <body ng-controller = "MainController as main">
     <div>
@@ -17,12 +21,15 @@
     </div>
 
     <div>
-      <ul ng-repeat = "item in main.tickets">
+      <ul class = "well col-md-4" ng-repeat = "item in main.tickets">
         <li>Type: {{item.type}}</li>
         <li>Priority: {{item.priority}}</li>
         <li>Description: {{item.description}}</li>
         <li>Assignee: {{item.assignee}}</li>
         <li>Reporter: {{item.reporter}}</li>
+        <li>Created: {{item.created}}</li>
+        <li>Updated: {{item.updated}}</li>
+        <button ng-click = "main.deleteTicket(item)">Completed</button>
       </ul>
 
     </div>

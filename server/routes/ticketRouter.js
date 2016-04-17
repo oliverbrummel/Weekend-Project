@@ -3,6 +3,7 @@ var path = require('path');
 var Ticket = require('../../models/ticket.js');
 
 
+
 var router = express.Router();
 
 router.get('/all', function(request, response){
@@ -41,6 +42,21 @@ router.post('/makeTicket', function(request, response){
     }
   })
 })
+
+router.delete('/remove/:id', function(request, response){
+  // var id = request.params.id;
+  Ticket.findOneAndRemove({_id: request.params.id}, function(err, ticket){
+    if(err){
+      response.sendStatus(500);
+    } else {
+      console.log('router.delete going through');
+      console.log(request.params.id);
+      response.sendStatus(200);
+    }
+  })
+})
+
+
 
 
 module.exports = router;

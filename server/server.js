@@ -1,9 +1,12 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var moment = require('moment');
 
 var index = require('./routes/index.js');
 var tickets = require('./routes/ticketRouter.js');
+
+moment().format('yyyy-mm-dd');
 
 
 

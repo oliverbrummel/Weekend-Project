@@ -13,11 +13,20 @@ app.controller('MainController', ['$http', function($http){
   }
 
   vm.makeTicket = function(){
-    $http.post('tickets/makeTicket', vm.ticket).then(function(response){
+    $http.post('/tickets/makeTicket', vm.ticket).then(function(response){
       console.log(response);
       vm.ticket = {};
       vm.getTickets();
     })
+  }
+
+  vm.deleteTicket = function(ticket){
+    console.log('deleteTicket function ran');
+    $http.delete('/tickets/remove/' + ticket._id).then(function(response){
+      console.log('Ticket removed');
+      vm.getTickets();
+    });
+
   }
 
   vm.getTickets();
