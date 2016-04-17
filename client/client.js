@@ -9,6 +9,13 @@ app.controller('MainController', ['$http', function($http){
     $http.get('/tickets/all').then(function(response){
       console.log(response);
       vm.tickets = response.data;
+      vm.tickets.map(function(ticket){
+        var cleanCreate = moment(ticket.created).format('MMMM Do YYYY, h:mm:ss a');
+        ticket.createdString = cleanCreate;
+        var cleanUpdate = moment(ticket.updated).format('MMMM Do YYYY, h:mm:ss a');
+        ticket.updatedString = cleanUpdate;
+        console.log(moment(ticket.created).format('MMMM Do YYYY, h:mm:ss a'));
+      })
     })
   }
 

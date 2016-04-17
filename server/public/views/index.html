@@ -13,15 +13,15 @@
     <link rel = "stylesheet" href = "/assets/styles.css" />
   </head>
   <body ng-controller = "MainController as main">
-    <h1 class= "jumbotron">Ticket Assignments <small>get yo work on</small></h1>
-    <div class = "dataEntry">
+    <h1 class= "jumbotron text-center">Ticket Assignments <small>get yo work on</small></h1>
+    <div class = "dataEntry container">
       <p>Name: <input type="text" ng-model = "main.ticket.name" /></p>
       <p>Type: <input type="text" ng-model = "main.ticket.type" /></p>
       <p>Priority: <input type="text" ng-model = "main.ticket.priority"/></p>
       <p>Description: <input type="text" ng-model = "main.ticket.description"/></p>
       <p>Assignee: <input type="text" ng-model = "main.ticket.assignee"/></p>
       <p>Reporter: <input type="text" ng-model = "main.ticket.reporter"/></p>
-      <input type="submit" ng-click = "main.makeTicket()"/>
+      <input type="submit" class = "btn btn-lg btn-danger" ng-click = "main.makeTicket()"/>
     </div>
 
     <div>
@@ -32,8 +32,8 @@
         <li>Description: {{item.description}}</li>
         <li>Assignee: {{item.assignee}}</li>
         <li>Reporter: {{item.reporter}}</li>
-        <li>Created: {{item.created}}</li>
-        <li>Updated: {{item.updated}}</li>
+        <li>Created: {{item.createdString}}</li>
+        <li>Updated: {{item.updatedString}}</li>
         <button class = "btn btn-sm btn-success" ng-click = "main.deleteTicket(item)">Completed</button>
       </ul>
 

@@ -22,16 +22,20 @@ router.post('/makeTicket', function(request, response){
 
   var data = request.body
 
-  var newTicket = new Ticket ({
-    name: data.name,
-    type: data.type,
-    priority: data.priority,
-    description: data.description,
-    assignee: data.assignee,
-    reporter: data.reporter,
-    created: new Date(),
-    updated: new Date()
-  })
+  var newTicket = new Ticket (request.body);
+    newTicket.created = new Date();
+    newTicket.updated = new Date();
+
+  // var newTicket = new Ticket ({
+  //   name: data.name,
+  //   type: data.type,
+  //   priority: data.priority,
+  //   description: data.description,
+  //   assignee: data.assignee,
+  //   reporter: data.reporter,
+  //   created: new Date(),
+  //   updated: new Date()
+  // })
   newTicket.save(function(err){
     if(err){
       console.log(err);
