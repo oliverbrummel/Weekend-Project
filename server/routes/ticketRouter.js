@@ -60,6 +60,22 @@ router.delete('/remove/:id', function(request, response){
   })
 })
 
+router.put('/editTicket', function(request, response){
+
+  var newTicket = new Ticket(request.body);
+  newTicket.updated = new Date();
+
+  Ticket.findOneAndUpdate({_id: request.body._id}, newTicket, function(err, ticket){
+    if(err){
+      console.log(err);
+      response.sendStatus(500);
+    } else {
+      console.log('router.put going through');
+      response.sendStatus(200);
+    }
+  })
+})
+
 
 
 

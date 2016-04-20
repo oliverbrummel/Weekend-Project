@@ -1,9 +1,19 @@
 .well {
-border-radius: 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.well li {
+  margin: 10px;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+}
+
+.dataEntry p {
+  padding-top: 10px;
+  font-weight: bold;
 }

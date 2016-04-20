@@ -33,7 +33,23 @@ app.controller('MainController', ['$http', function($http){
       console.log('Ticket removed');
       vm.getTickets();
     });
+  }
 
+
+  vm.editTicket = function(ticket){
+    console.log('editTicket func running');
+    ticket.showSave = true;
+  }
+
+  vm.saveEdit = function(ticket index){
+    console.log('saveEdit func running');
+    ticket.showSave = false;
+    $http.put('/tickets/editTicket/', ticket).then(function(response){
+      console.log(ticket._id);
+      vm.ticket = response.body;
+
+      // vm.getTickets();
+    })
   }
 
   vm.getTickets();
